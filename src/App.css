@@ -1,0 +1,264 @@
+* {
+  position: relative;
+  box-sizing: border-box;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-header {
+  font-family: 'Caveat Brush', cursive;
+  font-size: 4em;
+  color: #473664;
+  margin-top: 80px;
+  margin-bottom: 20px;
+  padding: 0 20px;
+}
+
+button {
+  font-family: 'Boogaloo', cursive;
+  text-transform: uppercase;
+  background-color: #5DC8CD;
+  color: white;
+  border: none;
+  transition: all 0.2s;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  padding: 10px 20px;
+  display: inline-block;
+  font-size: 1.2em;
+  margin: 15px 5px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #01939A;
+}
+
+.Category, .Score, .Lives {
+    font-family: 'Caveat Brush', cursive;
+    font-size: 1.8em;
+    color: #01595d;
+    padding: 0 20px;
+}
+
+form
+{
+    margin: 150px 500px;
+}
+
+label{
+    font-family: 'Boogaloo', cursive;
+    font-size: 1.2em;
+    margin-left: 4px;
+}
+
+#exampleInputPassword1{
+    margin-top: 5px;
+    margin-left: 41px;
+}
+
+input{
+    margin-left: 10px;
+}
+
+img.Man {
+  width: 150px;
+  margin-top: 10px;
+}
+
+img.Great-job {
+  vertical-align: bottom;
+  height: 70px;
+  margin-left: 10px;
+}
+
+/* hangman image tooltip */
+.Tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.Tooltip .Tooltip-text {
+    visibility: hidden;
+    width: 165px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 50%;
+    left: 110%;
+    margin-top: -5px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 14px;
+}
+
+.Tooltip .Tooltip-text::after {
+    content: "";
+    position: absolute;
+    bottom: 40%;
+    left: -5%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent #555 transparent transparent;
+}
+
+.Tooltip:hover .Tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+.Keyboard {
+  width: 95%;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.Word {
+  margin: 20px 0;
+  padding: 0 5px;
+}
+
+.Word-letter, .Keyboard-letter, .Checked-letter-correct, .Checked-letter-wrong {
+  border: 1px solid grey;
+  padding: 10px;
+  margin: 10px 3px;
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  border-radius: 10px;
+  line-height: 23px;
+  font-family: 'Boogaloo', cursive;
+  font-size: 1.5em;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.Keyboard-letter:hover {
+  background-color: #d7cfd6;
+}
+
+.Word-letter, .Checked-letter-correct, .Checked-letter-wrong {
+  pointer-events: none;  
+}
+
+.Checked-letter-correct {
+  background-color: lightgreen;
+  color: grey;
+}
+
+.Checked-letter-wrong {
+  background-color: #ffc4c4;
+  color: grey;
+}
+
+@media only screen and (min-width:960px) and (max-width: 1024px) {
+    .App-header {
+        margin-top: 30px;
+    }
+    form{
+        -webkit-appearance: none; -moz-appearance: none;
+        display: block;
+        font-size: 1em; line-height: 2.5em;
+        color: #333;
+        font-weight: bold;
+        height: 2.5em; width: 100%;
+        margin: 10rem 40rem;
+    }
+}
+
+@media only screen and (min-width:801px) and (max-width: 959px) {
+    .App-header {
+        margin-top: 30px;
+    }
+    form{
+        -webkit-appearance: none; -moz-appearance: none;
+        display: block;
+        font-size: 1em; line-height: 2.5em;
+        color: #333;
+        font-weight: bold;
+        height: 2.5em; width: 100%;
+        margin: 10rem 7rem;
+    }
+}
+
+@media only screen and (min-width:769px) and (max-width: 800px) {
+    .App-header {
+        margin-top: 30px;
+    }
+    form{
+        -webkit-appearance: none; -moz-appearance: none;
+        display: block;
+        font-size: 1em; line-height: 2.5em;
+        color: #333;
+        font-weight: bold;
+        height: 2.5em; width: 100%;
+        margin: 10rem 7rem;
+    }
+}
+
+@media only screen and (min-width:569px) and (max-width: 768px) {
+    .App-header {
+        margin-top: 30px;
+    }
+    form{
+        -webkit-appearance: none; -moz-appearance: none;
+        display: block;
+        font-size: 1em; line-height: 2.5em;
+        color: #333;
+        font-weight: bold;
+        height: 2.5em; width: 100%;
+        margin: 10rem 7rem;
+    }
+}
+
+@media only screen and (min-width:481px) and (max-width: 568px) {
+    .App-header {
+        margin-top: 30px;
+    }
+    form{
+        -webkit-appearance: none; -moz-appearance: none;
+        display: block;
+        font-size: 1em; line-height: 2.5em;
+        color: #333;
+        font-weight: bold;
+        height: 2.5em; width: 100%;
+        margin: 10rem 7rem;
+    }
+}
+
+@media only screen and (min-width:321px) and (max-width: 480px) {
+    .App-header {
+        margin-top: 30px;
+    }
+    form{
+        -webkit-appearance: none; -moz-appearance: none;
+        display: block;
+        font-size: 1em; line-height: 2.5em;
+        color: #333;
+        font-weight: bold;
+        height: 2.5em; width: 100%;
+        margin: 10rem 7rem;
+    }
+}
+
+@media only screen and (min-width:0px) and (max-width: 320px) {
+    .App-header {
+        margin-top: 30px;
+    }
+    form{
+        -webkit-appearance: none; -moz-appearance: none;
+        display: block;
+        font-size: 1em; line-height: 2.5em;
+        color: #333;
+        font-weight: bold;
+        height: 2.5em; width: 100%;
+        margin: 10rem 7rem;
+    }
+}
